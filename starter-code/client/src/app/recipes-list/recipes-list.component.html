@@ -1,0 +1,9 @@
+<div class="container" *ngFor="let recipe of recipesArray">
+  <div class="column">
+    <h2>{{recipe.name}}</h2>
+    <div class="recipe row">
+        <img [src]="recipe.image" [alt]="recipe.name">
+        <p class="details">{{recipe.description}}</p>
+    </div>
+  </div>
+</div>

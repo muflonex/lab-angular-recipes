@@ -1,0 +1,11 @@
+.recipe{
+  width: 50vw;
+}
+.recipe img{
+  object-fit: contain;
+  height: 20vh;
+  min-width: 20vw;
+}
+.details{
+  margin-left: 2vw;
+}
