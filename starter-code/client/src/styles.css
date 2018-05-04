@@ -55,10 +55,20 @@ label{
 .ingredient input{
   width: 3vw;
   height: 3vw;
+  padding-left: 30px;
 }
 
 .details{
   margin-left: 2vw;
+}
+.ingredients{
+  width: 66vw;
+}
+.ingredient{
+  max-width: 15vw;
+}
+.left{
+  justify-content: flex-start
 }
 .wrap{
   flex-wrap: wrap;
@@ -73,6 +83,9 @@ button{
   border:none;
   transition: all 0.3s ease-in;
   align-self:center;
+}
+.ingredient button{
+  width: 5vw
 }
 button:hover{
   background:darkgreen;
