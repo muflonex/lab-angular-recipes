@@ -6,12 +6,15 @@ import { RouterModule, Routes, RoutesRecognized } from '@angular/router'
 import { routes } from './my-route.routing'
 
 import { AppComponent } from './app.component';
+import { RecipeComponent } from './recipe/recipe.component';
 import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { RecipesService } from './recipes.service';
+import { IngredientsService } from './ingredients.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    RecipeComponent,
     RecipesListComponent
 ],
   imports: [
@@ -20,7 +23,7 @@ import { RecipesService } from './recipes.service';
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [RecipesService],
+  providers: [RecipesService, IngredientsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

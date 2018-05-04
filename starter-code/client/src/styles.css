@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  background: lightgrey;
+  display:flex;
+  justify-content:center;
+}
 .row{
   display:flex;
   justify-content: space-around;
@@ -10,4 +15,65 @@
 .container{
   display: flex;
   justify-content: center;
+}
+.recipe{
+  width: 50vw;
+}
+.center{
+  justify-content: center;
+}
+.between{
+  justify-content: space-between;
+}
+label{
+  margin: 10px; 
+}
+.recipe, .ingredient{
+  border: 1px solid grey;
+  padding: 10px 20px;
+  margin: 20px;
+  transition: all 0.3s ease-in;
+  background: white;
+}
+.recipe:hover, .ingredient:hover{
+  transform: scale(1.05,1.05)
+}
+.recipe img{
+  height: 20vh;
+  min-width: 20vw;
+  object-fit: contain;
+  
+}
+.ingredient img{
+  height: 10vh;
+  min-width: 5vw;
+  object-fit: contain;
+}
+.ingredient h3{
+  text-align: center;
+}
+.ingredient input{
+  width: 3vw;
+  height: 3vw;
+}
+
+.details{
+  margin-left: 2vw;
+}
+.wrap{
+  flex-wrap: wrap;
+}
+button{
+  margin: 10px;
+  background: green;
+  color:white;
+  font-weight: 700;
+  padding: 10px 20px;
+  width: 10vw;
+  border:none;
+  transition: all 0.3s ease-in;
+  align-self:center;
+}
+button:hover{
+  background:darkgreen;
 }

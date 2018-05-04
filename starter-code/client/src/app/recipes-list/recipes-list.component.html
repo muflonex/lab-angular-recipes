@@ -1,7 +1,7 @@
-<div class="container" *ngFor="let recipe of recipesArray">
+<div class="recipe container" *ngFor="let recipe of recipesArray">
   <div class="column">
     <h2>{{recipe.name}}</h2>
-    <div class="recipe row">
+    <div [routerLink]="['recipe/', recipe._id]" class="row">
         <img [src]="recipe.image" [alt]="recipe.name">
         <p class="details">{{recipe.description}}</p>
     </div>

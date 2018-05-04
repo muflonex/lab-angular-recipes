@@ -1,0 +1,23 @@
+<div *ngIf="recipe" class="column recipe">
+  <h2>
+    {{recipe.name}}
+  </h2>
+  <div class="row">
+    <img src="{{recipe.image}}" alt="{{recipe.name}}">
+    <p>
+      {{recipe.description}}
+    </p>
+    <ul><li *ngFor="let ingredient of recipe.ingredients">{{ingredient.quantity}}x {{ingredient.ingredientId.name}}</li></ul>
+  </div>
+  <button [routerLink]="['']">Home</button>
+</div>
+<div class="container wrap">
+    <div class="ingredient container between" *ngFor="let ingredient of ingredientsArray">
+    <label class="column center" for="{{ingredient.name}}">
+      {{ingredient.name}}
+    </label>
+    <input type="number" #qty min="0">
+    <button (click)="addIngredient(recipe._id, ingredient._id, qty.value )">Set</button>
+    </div>
+</div>
+<!-- [routerLink]="['recipe/', recipe._id]" -->

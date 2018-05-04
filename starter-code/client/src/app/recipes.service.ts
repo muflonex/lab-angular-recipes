@@ -23,10 +23,10 @@ export class RecipesService {
     return this.http.get(this.BASE_URL)
     .map((res: Response) => res.json());
   }
-  // getEntry(id): Observable<any> {
-  //   return this.http.get(`${this.BASE_URL}/${id}`)
-  //   .map((res: Response) => res.json());
-  // }
+  getEntry(id): Observable<any> {
+    return this.http.get(`${this.BASE_URL}/${id}`)
+    .map((res: Response) => res.json());
+  }
   // createEntry(event){
   //   return this.http.post(`${this.BASE_URL}`, event)
   //   .map(res => res.json())
